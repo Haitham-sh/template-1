@@ -7,3 +7,99 @@
 body {
     font-family: 'Work Sans', sans-serif;
 }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* header start */
+header {
+    padding: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 60px;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header .links .icon span {
+    background-color: black;
+    margin-bottom: 5px;
+    height: 2px;
+    width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+}
+
+header ul {
+    list-style: none;
+    position: absolute;
+    right: 0px;
+    min-width: 200px;
+    background-color: #10cab7;
+    padding: 0px;
+    margin-top: 10px;
+    display: none;
+}
+
+header ul::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #10cab7 transparent;
+    top: -20px;
+    right: 5px;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header li {
+    padding: 15px;
+}
+
+header li:not(:last-child) {
+    border-bottom: 2px solid black;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+header a:hover {
+    padding-left: 20px;
+}
+/* header start */
